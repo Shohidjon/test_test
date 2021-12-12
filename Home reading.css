@@ -1,0 +1,99 @@
+.container {
+    padding: 30px;
+}
+
+/* Radio button uchun container */
+.form-control {
+    display: block;
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Maxsus radio buttonga style berish */
+.custom-radio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.custom-radio_1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+/* Sichqoncha olib borilganda orqa fon rasmi*/
+.form-control:hover input ~ .custom-radio {
+    background-color: rgb(24, 88, 24);
+}
+
+.form-control:hover input ~ .custom-radio_1 {
+    background-color: rgb(24, 88, 24);
+}
+
+/* Radio  bottom cheked bo'lgan payti */
+
+.form-control input:checked ~.custom-radio {
+    background-color: red;
+}
+
+.form-control input:checked ~.custom-radio_1 {
+    background-color: green;
+}
+/* Radio botom tanlanganini bildiradi */
+.custom-radio:after {
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio_1:after {
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.form-control input:checked ~ .custom-radio:after {
+    display: block;
+}
+
+
+.form-control input:checked ~ .custom-radio_1:after {
+    display: block;
+}
+
+.asl {
+    text-align: center;
+    background-color: blue;
+    border: solid 1px black;
+    color:green;
+    padding: 25px;
+}
